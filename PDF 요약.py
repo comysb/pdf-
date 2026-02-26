@@ -4,7 +4,7 @@ import streamlit as st #streamlit: 웹 앱 UI를 쉽게 만들기 위한 라이�
 from langchain_text_splitters import CharacterTextSplitter #LangChain에서 긴 텍스트를 **조각(chunk)**으로 나눌 때 사용. 모델 입력 길이 제한 관리용.
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI #OpenAI 임베딩 생성과 LLM(대화형 모델) 호출용.
 from langchain_community.vectorstores import FAISS #FAISS: 텍스트 벡터를 저장하고 유사 문서를 검색하는 벡터 DB.
-from langchain.chains.question_answering import load_qa_chain #load_qa_chain: LangChain의 질문-응답 체인(QA 체인)을 생성.
+from langchain_classic.chains.question_answering import load_qa_chain #load_qa_chain: LangChain의 질문-응답 체인(QA 체인)을 생성.
 from langchain_community.callbacks import get_openai_callback #get_openai_callback: OpenAI API 호출 시 비용 추적용 콜백.
 import openai  # 키 유효성 검사를 위해 추가
 
