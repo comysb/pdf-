@@ -40,7 +40,10 @@ def main():
     # 사이드바 설정
     with st.sidebar:
         st.title("설정")
-        user_api_key = st.text_input("OpenAI API Key를 입력하세요", type="password") #type="password" → 입력값 숨김 처리
+        # secrets에서 API Key 가져오기 시도
+        default_key = st.secrets.get("OPENAI_API_KEY", "")
+        
+        user_api_key = st.text_input("OpenAI API Key를 입력하세요", value=default_key, type="password") #type="password" → 입력값 숨김 처리
         
         # 키 입력 여부에 따른 상태 메시지 표시
         if user_api_key:
