@@ -1,7 +1,7 @@
 import os #os: 운영체제 관련 작업(예: 파일 경로 처리)을 위해 임포트. 현재는 직접 사용되는 부분은 없음.
 from PyPDF2 import PdfReader #PyPDF2.PdfReader: PDF 파일을 읽고 텍스트 추출.
 import streamlit as st #streamlit: 웹 앱 UI를 쉽게 만들기 위한 라이브러리.
-from langchain.text_splitter import CharacterTextSplitter #LangChain에서 긴 텍스트를 **조각(chunk)**으로 나눌 때 사용. 모델 입력 길이 제한 관리용.
+from langchain_text_splitters import CharacterTextSplitter #LangChain에서 긴 텍스트를 **조각(chunk)**으로 나눌 때 사용. 모델 입력 길이 제한 관리용.
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI #OpenAI 임베딩 생성과 LLM(대화형 모델) 호출용.
 from langchain_community.vectorstores import FAISS #FAISS: 텍스트 벡터를 저장하고 유사 문서를 검색하는 벡터 DB.
 from langchain.chains.question_answering import load_qa_chain #load_qa_chain: LangChain의 질문-응답 체인(QA 체인)을 생성.
